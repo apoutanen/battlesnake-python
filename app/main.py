@@ -57,14 +57,25 @@ def move():
     for tempsnake in allSnakes:
         if tempsnake.get("id") == "5c0528b6-9afb-4d7e-b0cf-c46fa0593cda":
             snake = tempsnake
+            
+            
+    
+    bodyArray = snake["coords"]
+    head = bodyArray[0]
+    neck = bodyArray[1]
+    
+    
+    
+    
+    
 
 
  # TODO: Do things with data
-    directions = ['up', 'down', 'left', 'right']
+    directions = ['up': 0 , 'down' : 0, 'left' : 0 , 'right' :0 ]
 
     return {
         'move': random.choice(directions),
-        'taunt': 'random is good'
+        'taunt': 'u r hissssstory'
     }
 
 
