@@ -61,11 +61,23 @@ def move():
             
     
     
-    directions = {'up':0 , 'down' : 0, 'left' : 0 , 'right' : 0 }
+
     
     bodyArray = snake["coords"]
     head = bodyArray[0]
     neck = bodyArray[1]
+
+    upCoords = [head[0], head[1]-1]
+    downCoords = [head[0], head[1]+1]
+    leftCoords = [head[0]-1, head[1]]
+    rightCoords = [head[0]+1, head[1]]
+    
+    directions = {'up' : [0, upCoords], 'down' : [0, downCoords], 'left' : [0, leftCoords], 'right' : [0, rightCoords]}
+    
+    
+    if head[0] == 0 
+        directions['left'] = -10000
+        
     
     
 
@@ -86,7 +98,7 @@ def end():
     # TODO: Do things with data
 
     return {
-        'taunt': ''
+        'taunt': ' u r hissstory'
     }
 
 
