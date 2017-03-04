@@ -71,7 +71,7 @@ def move():
 
 
     return {
-        'move': "up",
+        'move': 'up',
         'taunt': 'u r hissssstory'
     }
 
