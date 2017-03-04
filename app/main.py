@@ -105,7 +105,8 @@ def move():
     
     return {
         'move': nextMove,
-        'taunt': taunts[data["turn"]]
+        #'taunt': taunts[data["turn"]%(len(taunts))]
+        'taunt': nextMove
     }
 
 
