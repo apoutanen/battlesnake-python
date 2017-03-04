@@ -79,11 +79,11 @@ def move():
             directions[key][0] = -2
     
     
-   # for snek in allSnakes:
-    #    for coords in snek["coords"]:
-     #       for key in directions:
-      #          if directions[key][1] == coords:
-       #             del directions[key]
+    for snek in allSnakes:
+        for coords in snek["coords"]:
+            for key in directions:
+                if directions[key][1] == coords:
+                    directions[key][0] = -2
     
     
     
