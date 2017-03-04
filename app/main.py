@@ -10,7 +10,7 @@ def static(path):
 
 @bottle.get('/')
 def index():
-    head_url = '%s://%s/static/head.png' % (
+    head_url = 'https://pbs.twimg.com/profile_images/135501981/barrybbprofile_400x400.jpg' % (
         bottle.request.urlparts.scheme,
         bottle.request.urlparts.netloc
     )
@@ -28,7 +28,7 @@ def start():
     board_width = data['width']
     board_height = data['height']
 
-    head_url = '%s://%s/static/head.png' % (
+    head_url = 'https://pbs.twimg.com/profile_images/135501981/barrybbprofile_400x400.jpg' % (
         bottle.request.urlparts.scheme,
         bottle.request.urlparts.netloc
     )
@@ -95,12 +95,13 @@ def move():
             nextMove = key
         
    
-    taunts = ['lol', 'wew']
+    taunts = ['According', 'to', 'all', 'known', 'laws', 'of', 'aviation,', 'there', 'is', 'no', 'way', 'a', 'bee', 'should', 'be', 'able', 'to', 'fly.', 'Its', 'wings', 'are', 'too', 'small', 'to', 'get', 'its', 'fat', 'little', 'body', 'off', 'the', 'ground.', 'The', 'bee,', 'of', 'course,', 'flies', 'anyway', 'because', 'bees', "don't", 'care', 'what', 'humans', 'think', 'is', 'impossible']
+
     
     
     return {
         'move': nextMove,
-        'taunt': random.choice(taunts)
+        'taunt': taunts[data["turn"]]
     }
 
 
