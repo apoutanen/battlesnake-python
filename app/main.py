@@ -52,7 +52,7 @@ def move():
     width = data['width']
     height = data['height']
 
-    
+    snake = {}
     allSnakes = data.get("snakes")
     for tempsnake in allSnakes:
         if tempsnake.get("id") == data["you"]:
@@ -85,11 +85,11 @@ def move():
             x = directions[i][0]
             nextMove = i
         
+   
     
-
     return {
         'move': nextMove,
-        'taunt': 'u r hissssstory'
+        'taunt': nextMove
     }
 
 
