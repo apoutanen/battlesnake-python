@@ -10,14 +10,16 @@ def static(path):
 
 @bottle.get('/')
 def index():
-    head_url = 'https://pbs.twimg.com/profile_images/135501981/barrybbprofile_400x400.jpg' % (
+    head_url = '%s://%s/static/head.png' % (
         bottle.request.urlparts.scheme,
         bottle.request.urlparts.netloc
     )
 
     return {
         'color': '#48C9B0',
-        'head': head_url
+        'head': head_url,
+        'head_type' : 'smile',
+        'tail_type' : 'round-bum'
     }
 
 
@@ -28,7 +30,7 @@ def start():
     board_width = data['width']
     board_height = data['height']
 
-    head_url = 'https://pbs.twimg.com/profile_images/135501981/barrybbprofile_400x400.jpg' % (
+    head_url = '%s://%s/static/head.png' % (
         bottle.request.urlparts.scheme,
         bottle.request.urlparts.netloc
     )
@@ -39,7 +41,9 @@ def start():
         'color': '#48C9B0',
         'taunt': ';) :))))))))))',
         'head_url': head_url,
-        'name': 'dead snake'
+        'name': 'beeeeeeeeeesssssssssneeeeeeekk',
+        'head_type' : 'smile',
+        'tail_type' : 'round-bum'
     }
 
 
