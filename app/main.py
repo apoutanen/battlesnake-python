@@ -79,16 +79,16 @@ def move():
    
     nextMove = ''
     x = -1
-    for i in directions:
-        if x < directions[i][0]:
-            x = directions[i][0]
-            nextMove = i
+    for key, value in directions.iteritems():
+        if x < value[0]:
+            x = value[0]
+            nextMove = key
         
    
     
     return {
         'move': 'left',
-        'taunt': 'heeeellll yeah'
+        'taunt': nextMove
     }
 
 
