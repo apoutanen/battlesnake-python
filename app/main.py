@@ -87,7 +87,7 @@ def move():
    
     
     return {
-        'move': 'left',
+        'move': nextMove,
         'taunt': nextMove
     }
 
