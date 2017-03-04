@@ -41,7 +41,7 @@ def start():
         'color': '#48C9B0',
         'taunt': ';) :))))))))))',
         'head_url': head_url,
-        'name': 'beeeeeeeeeesssssssssneeeeeeekk',
+        'name': 'Barry B. Snekson',
         'head_type' : 'smile',
         'tail_type' : 'round-bum'
     }
