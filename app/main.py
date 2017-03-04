@@ -75,8 +75,8 @@ def move():
     for key in directions:
        #if move will kill snek
         if directions[key][1] == neck or (0 > directions[key][1][0]) or (directions[key][1][0] > width-1) or (0 > directions[key][1][1]) or (directions[key][1][1] > height-1):
-            del directions[key]
-   
+            #del directions[key]
+            directions[key][0] = -2
     
     
    # for snek in allSnakes:
