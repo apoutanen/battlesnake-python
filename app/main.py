@@ -75,8 +75,18 @@ def move():
     for key in directions:
        #if move will kill snek
         if directions[key][1] == neck or (0 > directions[key][1][0]) or (directions[key][1][0] > width-1) or (0 > directions[key][1][1]) or (directions[key][1][1] > height-1):
-            directions[key][0] = -2
+            del directions[key]
    
+    
+    
+    for snek in allSnakes:
+        for coords in snek["coords"]:
+            for key in directions:
+                if directions[key][1] == coords:
+                    del directions[key]
+    
+    
+    
     nextMove = ''
     x = -1
     for key, value in directions.iteritems():
@@ -85,10 +95,12 @@ def move():
             nextMove = key
         
    
+    taunts = ['lol', 'wew']
+    
     
     return {
         'move': nextMove,
-        'taunt': nextMove
+        'taunt': random.choice(taunts),
     }
 
 
