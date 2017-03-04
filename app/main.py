@@ -10,13 +10,13 @@ def static(path):
 
 @bottle.get('/')
 def index():
-    head_url = '%s://%s/static/head.pnglololololol' % (
+    head_url = '%s://%s/static/head.png' % (
         bottle.request.urlparts.scheme,
         bottle.request.urlparts.netloc
     )
 
     return {
-        'color': '#00feddd00',
+        'color': '#00ff00',
         'head': head_url
     }
 
@@ -51,6 +51,12 @@ def move():
     game_id = data['game_id']
     board_width = data['width']
     board_height = data['height']
+
+
+    allSnakes = data.get("snakes")
+    for tempsnake in allSnakes:
+        if tempsnake.get("id") == "5c0528b6-9afb-4d7e-b0cf-c46fa0593cda":
+            snake = tempsnake
 
 
  # TODO: Do things with data
