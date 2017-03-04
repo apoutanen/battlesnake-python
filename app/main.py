@@ -39,7 +39,7 @@ def start():
 
     return {
         'color': '#48C9B0',
-        'taunt': ';) :))))))))))',
+        'taunt': 'I ducking love the BEE MOVIE!!!!!!!',
         'head_url': head_url,
         'name': 'Barry B. Snekson',
         'head_type' : 'smile',
