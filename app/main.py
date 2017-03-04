@@ -79,11 +79,11 @@ def move():
    
     
     
-    for snek in allSnakes:
-        for coords in snek["coords"]:
-            for key in directions:
-                if directions[key][1] == coords:
-                    del directions[key]
+   # for snek in allSnakes:
+    #    for coords in snek["coords"]:
+     #       for key in directions:
+      #          if directions[key][1] == coords:
+       #             del directions[key]
     
     
     
@@ -100,7 +100,7 @@ def move():
     
     return {
         'move': nextMove,
-        'taunt': random.choice(taunts),
+        'taunt': random.choice(taunts)
     }
 
 
