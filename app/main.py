@@ -60,21 +60,18 @@ def move():
             
             
     
+    
+    directions = ['up': 0 , 'down' : 0, 'left' : 0 , 'right' : 0 ]
+    
     bodyArray = snake["coords"]
     head = bodyArray[0]
     neck = bodyArray[1]
     
     
-    
-    
-    
 
-
- # TODO: Do things with data
-    directions = ['up': 0 , 'down' : 0, 'left' : 0 , 'right' :0 ]
 
     return {
-        'move': random.choice(directions),
+        'move': "up",
         'taunt': 'u r hissssstory'
     }
 
