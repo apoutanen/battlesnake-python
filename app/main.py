@@ -52,10 +52,10 @@ def move():
     width = data['width']
     height = data['height']
 
-
+    
     allSnakes = data.get("snakes")
     for tempsnake in allSnakes:
-        if tempsnake.get("id") == "5c0528b6-9afb-4d7e-b0cf-c46fa0593cda":
+        if tempsnake.get("id") == data["you"]:
             snake = tempsnake
             
             
