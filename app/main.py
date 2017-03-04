@@ -16,7 +16,7 @@ def index():
     )
 
     return {
-        'color': '#00ff00',
+        'color': '#48C9B0',
         'head': head_url
     }
 
@@ -36,10 +36,10 @@ def start():
     # TODO: Do things with data
 
     return {
-        'color': '#00FF00',
-        'taunt': '{} ({}x{})'.format(game_id, board_width, board_height),
+        'color': '#48C9B0',
+        'taunt': ';) :))))))))))',
         'head_url': head_url,
-        'name': 'deadsnake'
+        'name': 'dead snake'
     }
 
 
