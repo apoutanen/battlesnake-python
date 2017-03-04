@@ -49,8 +49,8 @@ def move():
     data = bottle.request.json
     
     game_id = data['game_id']
-    board_width = data['width']
-    board_height = data['height']
+    width = data['width']
+    height = data['height']
 
 
     allSnakes = data.get("snakes")
@@ -59,9 +59,6 @@ def move():
             snake = tempsnake
             
             
-    
-    
-
     
     bodyArray = snake["coords"]
     head = bodyArray[0]
@@ -75,15 +72,22 @@ def move():
     directions = {'up' : [0, upCoords], 'down' : [0, downCoords], 'left' : [0, leftCoords], 'right' : [0, rightCoords]}
     
     
-    if head[0] == 0 
-        directions['left'] = -10000
+    for key in directions:
+       #if move will kill snek
+        if directions[key][1] == neck or not(0 <= directions[key][1][0] < width) or not(0 <= directions[key][1][1] < height):
+            del directions[key]
+        
+    nextMove = ''
+    x = -1
+    for i in directions:
+        if x < directions[i][0]:
+            x = directions[i][0]
+            nextMove = i
         
     
-    
-
 
     return {
-        'move': 'up',
+        'move': nextMove,
         'taunt': 'u r hissssstory'
     }
 
