@@ -100,13 +100,11 @@ def move():
                 directions['right'][0] = 10
             else:
                 directions['left'][0] = 10
-    #    else:
-    #         if(dely < 0):
-    #            directions['down'][0] = 10
-    #        else:
-    #            directions['up'][0] = 10           
-    #        
-    #    
+        else:
+            if(dely < 0):
+                directions['down'][0] = 10
+            else:
+                directions['up'][0] = 10           
     
     
     
