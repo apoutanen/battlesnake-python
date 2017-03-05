@@ -135,23 +135,30 @@ def move():
 	
 	for snek in allSnakes:
         for coords in snek["coords"]:
-           if outsideCoords['upup'] == coords:
+            if outsideCoords['upup'] == coords:
                 directions['up'][0] = -5
+           
             elif outsideCoords['downdown'] == coords:
                 directions['down'][0] = -5
+            
             elif outsideCoords['leftleft'] == coords:
                 directions['left'][0] = -5
+            
             elif outsideCoords['rightright'] == coords:
                 directions['right'][0] = -5
+            
             elif outsideCoords['upleft'] == coords:
                 directions['up'][0] = -5
                 directions['left'][0] = -5
+            
             elif outsideCoords['downleft'] == coords:
                 directions['down'][0] = -5
                 directions['left'][0] = -5
+            
             elif outsideCoords['upright'] == coords:
                 directions['up'][0] = -5
                 directions['right'][0] = -5
+            
             elif outsideCoords['downright'] == coords:
                 directions['down'][0] = -5
                 directions['right'][0] = -5
