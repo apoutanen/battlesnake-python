@@ -88,7 +88,8 @@ def move():
             if(foodDist > newDist):
                 foodDist = newDist
                 index = counter
-            counter++
+            
+            counter = counter + 1
     
         delx = head[0] - food[index][0]
         dely = head[1] - food[index][1]
