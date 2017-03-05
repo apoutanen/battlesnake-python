@@ -81,12 +81,14 @@ def move():
     if snake["health_points"] < 80:
         food = data["food"]
         
+        counter = 0
         for yums in food:
             newDist = abs(head[0] - yums[0]) + abs(head[1] - yums[1])
-            distances.append(newDist)
+            
             if(foodDist > newDist):
                 foodDist = newDist
-                index = yums
+                index = counter
+            counter++
     
         delx = head[0] - food[index][0]
         dely = head[1] - food[index][1]
@@ -103,6 +105,7 @@ def move():
                 directions['up'][0] = 10           
             
         
+    
     
     
     for key in directions:
