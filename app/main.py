@@ -86,11 +86,11 @@ def move():
         for yums in food:
             newDist = abs(head[0] - yums[0]) + abs(head[1] - yums[1])
             
-    #        if(foodDist > newDist):
-    #            foodDist = newDist
-    #            index = counter
+            if(foodDist > newDist):
+                foodDist = newDist
+                index = counter
             
-    #        counter = counter + 1
+            counter = counter + 1
     
     #    delx = head[0] - food[index][0]
     #    dely = head[1] - food[index][1]
