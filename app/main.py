@@ -95,11 +95,11 @@ def move():
         delx = head[0] - food[index][0]
         dely = head[1] - food[index][1]
         
-    #    if(abs(delx) > abs(dely)):
-    #        if(delx < 0):
-    #            directions['right'][0] = 10
-    #        else:
-    #            directions['left'][0] = 10
+        if(abs(delx) > abs(dely)):
+            if(delx < 0):
+                directions['right'][0] = 10
+            else:
+                directions['left'][0] = 10
     #    else:
     #         if(dely < 0):
     #            directions['down'][0] = 10
