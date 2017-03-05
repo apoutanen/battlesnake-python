@@ -16,7 +16,7 @@ def index():
     )
 
     return {
-        'color': '#48C9B0',
+        'color': '#FFFF00',
         'head': head_url,
         'head_type' : 'smile',
         'tail_type' : 'round-bum'
@@ -38,7 +38,7 @@ def start():
     # TODO: Do things with data
 
     return {
-        'color': '#48C9B0',
+        'color': '#FFFF00',
         'taunt': 'I ducking love the BEE MOVIE!!!!!!!',
         'head_url': head_url,
         'name': 'Barry B. Snekson',
@@ -78,34 +78,34 @@ def move():
     foodDist = 1000
     distances = []
     index = 0
-    if snake["health_points"] < 80:
-        food = data["food"]
+    #if snake["health_points"] < 80:
+    #    food = data["food"]
         
-        counter = 0
-        for yums in food:
-            newDist = abs(head[0] - yums[0]) + abs(head[1] - yums[1])
+    #    counter = 0
+    #    for yums in food:
+    #        newDist = abs(head[0] - yums[0]) + abs(head[1] - yums[1])
             
-            if(foodDist > newDist):
-                foodDist = newDist
-                index = counter
+    #        if(foodDist > newDist):
+    #            foodDist = newDist
+    #            index = counter
             
-            counter = counter + 1
+    #        counter = counter + 1
     
-        delx = head[0] - food[index][0]
-        dely = head[1] - food[index][1]
+    #    delx = head[0] - food[index][0]
+    #    dely = head[1] - food[index][1]
         
-        if(abs(delx) > abs(dely)):
-            if(delx < 0):
-                directions['right'][0] = 10
-            else:
-                directions['left'][0] = 10
-        else:
-             if(dely < 0):
-                directions['down'][0] = 10
-            else:
-                directions['up'][0] = 10           
-            
-        
+    #    if(abs(delx) > abs(dely)):
+    #        if(delx < 0):
+    #            directions['right'][0] = 10
+    #        else:
+    #            directions['left'][0] = 10
+    #    else:
+    #         if(dely < 0):
+    #            directions['down'][0] = 10
+    #        else:
+    #            directions['up'][0] = 10           
+    #        
+    #    
     
     
     
