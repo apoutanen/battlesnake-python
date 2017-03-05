@@ -122,15 +122,7 @@ def move():
                     directions[key][0] = -2
     
     
-    outsideCoords = {
-		'upup': [head[0], head[1]-2],
-		'downdown': [head[0], head[1]+2],
-		'leftleft':[head[0]-2, head[1]],
-		'rightright': [head[0]+2, head[1]],
-		'upleft': [head[0]-1, head[1]-1],
-		'downleft':[head[0]-1, head[1]+1],
-		'upright':[head[0]+1, head[1]-1],
-		'downright':[head[0]+1, head[1]+1]
+    outsideCoords = {'upup': [head[0], head[1]-2], 'downdown': [head[0], head[1]+2], 'leftleft':[head[0]-2, head[1]], 'rightright': [head[0]+2, head[1]], 'upleft': [head[0]-1, head[1]-1], 'downleft':[head[0]-1, head[1]+1], 'upright':[head[0]+1, head[1]-1], 'downright':[head[0]+1, head[1]+1]
 	}
 	
 	for snek in allSnakes:
