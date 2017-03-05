@@ -16,7 +16,7 @@ def index():
     )
 
     return {
-        'color': '#FFFF00',
+        'color': '#e5e500',
         'head': head_url,
         'head_type' : 'smile',
         'tail_type' : 'round-bum'
@@ -38,7 +38,7 @@ def start():
     # TODO: Do things with data
 
     return {
-        'color': '#FFFF00',
+        'color': '#e5e500',
         'taunt': 'I ducking love the BEE MOVIE!!!!!!!',
         'head_url': head_url,
         'name': 'Barry B. Snekson',
@@ -79,7 +79,7 @@ def move():
     distances = []
     index = 0
    
-    if snake["health_points"] < 80:
+    if snake["health_points"] < 50:
         food = data["food"]
         
         counter = 0
@@ -122,16 +122,50 @@ def move():
                     directions[key][0] = -2
     
     
+    outsideCoords = {
+		'upup': [head[0], head[1]-2],
+		'downdown': [head[0], head[1]+2],
+		'leftleft':[head[0]-2, head[1]],
+		'rightright': [head[0]+2, head[1]],
+		'upleft': [head[0]-1, head[1]-1],
+		'downleft':[head[0]-1, head[1]+1],
+		'upright':[head[0]+1, head[1]-1],
+		'downright':[head[0]+1, head[1]+1]
+	}
+	
+	for snek in allSnakes:
+        for coords in snek["coords"]:
+           if outsideCoords['upup'] == coords:
+                directions['up'][0] = -5
+            elif outsideCoords['downdown'] == coords:
+                directions['down'][0] = -5
+            elif outsideCoords['leftleft'] == coords:
+                directions['left'][0] = -5
+            elif outsideCoords['rightright'] == coords:
+                directions['right'][0] = -5
+            elif outsideCoords['upleft'] == coords:
+                directions['up'][0] = -5
+                directions['left'][0] = -5
+            elif outsideCoords['downleft'] == coords:
+                directions['down'][0] = -5
+                directions['left'][0] = -5
+            elif outsideCoords['upright'] == coords:
+                directions['up'][0] = -5
+                directions['right'][0] = -5
+            elif outsideCoords['downright'] == coords:
+                directions['down'][0] = -5
+                directions['right'][0] = -5
+    
     
     nextMove = ''
-    x = -1
+    x = -1000
     for key, value in directions.iteritems():
         if x < value[0]:
             x = value[0]
             nextMove = key
         
    
-    taunts = ['According', 'to', 'all', 'known', 'laws', 'of', 'aviation,', 'there', 'is', 'no', 'way', 'a', 'bee', 'should', 'be', 'able', 'to', 'fly.', 'Its', 'wings', 'are', 'too', 'small', 'to', 'get', 'its', 'fat', 'little', 'body', 'off', 'the', 'ground.', 'The', 'bee,', 'of', 'course,', 'flies', 'anyway', 'because', 'bees', "don't", 'care', 'what', 'humans', 'think', 'is', 'impossible']
+    taunts = ['According', 'to', 'all', 'known', 'laws', 'of', 'aviation,', 'there', 'is', 'no', 'way', 'a', 'bee', 'should', 'be', 'able', 'to', 'fly.', 'Its', 'wings', 'are', 'too', 'small', 'to', 'get', 'its', 'fat', 'little', 'body', 'off', 'the', 'ground.', 'The', 'bee,', 'of', 'course,', 'flies', 'anyway', 'because', 'bees', "don't", 'care', 'what', 'humans', 'think', 'is', 'impossible.', 'Yellow,', 'black.', 'Yellow,', 'black.', 'Yellow,', 'black.', 'Yellow,', 'black.', 'Ooh,', 'black', 'and', 'yellow!', "Let's", 'shake', 'it', 'up', 'a', 'little.', 'Barry!', 'Breakfast', 'is', 'ready!', 'Ooming!', 'Hang', 'on', 'a', 'second.', 'Hello?', '-', 'Barry?', '-', 'Adam?', '-', 'Oan', 'you', 'believe', 'this', 'is', 'happening?', '-', 'I', "can't.", "I'll", 'pick', 'you', 'up.', 'Looking', 'sharp.', 'Use', 'the', 'stairs.', 'Your', 'father', 'paid', 'good', 'money', 'for', 'those.']
 
     
     
