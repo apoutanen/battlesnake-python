@@ -16,7 +16,7 @@ def index():
     )
 
     return {
-        'color': '#e5e500',
+        'color': '#ff8c00',
         'head': head_url,
         'head_type' : 'smile',
         'tail_type' : 'round-bum'
@@ -38,8 +38,8 @@ def start():
     # TODO: Do things with data
 
     return {
-        'color': '#e5e500',
-        'taunt': 'I ducking love the BEE MOVIE!!!!!!!',
+        'color': '#ff8c00',
+        'taunt': 'Ya like javasssssssssscript ;)',
         'head_url': head_url,
         'name': 'Barry B. Snekson',
         'head_type' : 'smile',
@@ -164,7 +164,7 @@ def move():
             nextMove = key
         
    
-    taunts = ['According', 'to', 'all', 'known', 'laws', 'of', 'aviation,', 'there', 'is', 'no', 'way', 'a', 'bee', 'should', 'be', 'able', 'to', 'fly.', 'Its', 'wings', 'are', 'too', 'small', 'to', 'get', 'its', 'fat', 'little', 'body', 'off', 'the', 'ground.', 'The', 'bee,', 'of', 'course,', 'flies', 'anyway', 'because', 'bees', "don't", 'care', 'what', 'humans', 'think', 'is', 'impossible.', 'Yellow,', 'black.', 'Yellow,', 'black.', 'Yellow,', 'black.', 'Yellow,', 'black.', 'Ooh,', 'black', 'and', 'yellow!', "Let's", 'shake', 'it', 'up', 'a', 'little.', 'Barry!', 'Breakfast', 'is', 'ready!', 'Ooming!', 'Hang', 'on', 'a', 'second.', 'Hello?', '-', 'Barry?', '-', 'Adam?', '-', 'Oan', 'you', 'believe', 'this', 'is', 'happening?', '-', 'I', "can't.", "I'll", 'pick', 'you', 'up.', 'Looking', 'sharp.', 'Use', 'the', 'stairs.', 'Your', 'father', 'paid', 'good', 'money', 'for', 'those.']
+    taunts = ['According', 'According','According','to','to','to', 'all','all','all', 'known', 'known', 'known', 'laws', 'laws', 'laws', 'of', 'of', 'of', 'aviation,','aviation,','aviation,', 'there', 'there', 'there', 'is', 'is', 'is', 'no', 'no', 'no', 'way', 'way', 'way', 'a', 'a', 'a', 'bee','bee','bee', 'should', 'should', 'should', 'be', 'be', 'be', 'able','able','able', 'to','to','to', 'fly.', 'fly.', 'fly.', 'Its','Its','Its', 'wings','wings','wings', 'are', 'are', 'are', 'too','too','too', 'small', 'small', 'small', 'to', 'to', 'to', 'get','get','get', 'its','its','its', 'fat', 'fat', 'fat', 'little', 'body', 'off', 'the', 'ground.', 'The', 'bee,', 'of', 'course,', 'flies', 'anyway', 'because', 'bees', "don't", 'care', 'what', 'humans', 'think', 'is', 'impossible.', 'Yellow,', 'black.', 'Yellow,', 'black.', 'Yellow,', 'black.', 'Yellow,', 'black.', 'Ooh,', 'black', 'and', 'yellow!', "Let's", 'shake', 'it', 'up', 'a', 'little.', 'Barry!', 'Breakfast', 'is', 'ready!', 'Ooming!', 'Hang', 'on', 'a', 'second.', 'Hello?', '-', 'Barry?', '-', 'Adam?', '-', 'Oan', 'you', 'believe', 'this', 'is', 'happening?', '-', 'I', "can't.", "I'll", 'pick', 'you', 'up.', 'Looking', 'sharp.', 'Use', 'the', 'stairs.', 'Your', 'father', 'paid', 'good', 'money', 'for', 'those.']
 
     
     
