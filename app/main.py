@@ -84,7 +84,7 @@ def move():
         for yums in food:
             newDist = abs(head[0] - yums[0]) + abs(head[1] - yums[1])
             distances.append(newDist)
-            if(foodDist > newDist)
+            if(foodDist > newDist):
                 foodDist = newDist
                 index = yums
     
@@ -94,12 +94,12 @@ def move():
         if(abs(delx) > abs(dely)):
             if(delx < 0):
                 directions['right'][0] = 10
-            else
+            else:
                 directions['left'][0] = 10
-        else
+        else:
              if(dely < 0):
                 directions['down'][0] = 10
-            else
+            else:
                 directions['up'][0] = 10           
             
         
