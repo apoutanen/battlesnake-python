@@ -75,6 +75,35 @@ def move():
     
     directions = {'up' : [0, upCoords], 'down' : [0, downCoords], 'left' : [0, leftCoords], 'right' : [0, rightCoords]}
     
+    foodDist = 1000
+    distances = []
+    index = 0
+    if snake["health_points"] < 80:
+        food = data["food"]
+        
+        for yums in food:
+            newDist = abs(head[0] - yums[0]) + abs(head[1] - yums[1])
+            distances.append(newDist)
+            if(foodDist > newDist)
+                foodDist = newDist
+                index = yums
+    
+        delx = head[0] - food[index][0]
+        dely = head[1] - food[index][1]
+        
+        if(abs(delx) > abs(dely)):
+            if(delx < 0):
+                directions['right'][0] = 10
+            else
+                directions['left'][0] = 10
+        else
+             if(dely < 0):
+                directions['down'][0] = 10
+            else
+                directions['up'][0] = 10           
+            
+        
+    
     
     for key in directions:
        #if move will kill snek
@@ -105,8 +134,8 @@ def move():
     
     return {
         'move': nextMove,
-        #'taunt': taunts[data["turn"]%(len(taunts))]
-        'taunt': nextMove
+        'taunt': taunts[data["turn"]%(len(taunts))]
+        #'taunt': nextMove
     }
 
 
@@ -122,6 +151,7 @@ def end():
     return {
         'taunt': ' u r hissstory'
     }
+    
 
 
 # Expose WSGI app (so gunicorn can find it)
