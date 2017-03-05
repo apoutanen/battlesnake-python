@@ -78,12 +78,13 @@ def move():
     foodDist = 1000
     distances = []
     index = 0
-    #if snake["health_points"] < 80:
-    #    food = data["food"]
+   
+    if snake["health_points"] < 80:
+        food = data["food"]
         
-    #    counter = 0
-    #    for yums in food:
-    #        newDist = abs(head[0] - yums[0]) + abs(head[1] - yums[1])
+        counter = 0
+        for yums in food:
+            newDist = abs(head[0] - yums[0]) + abs(head[1] - yums[1])
             
     #        if(foodDist > newDist):
     #            foodDist = newDist
