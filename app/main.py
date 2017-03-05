@@ -92,8 +92,8 @@ def move():
             
             counter = counter + 1
     
-    #    delx = head[0] - food[index][0]
-    #    dely = head[1] - food[index][1]
+        delx = head[0] - food[index][0]
+        dely = head[1] - food[index][1]
         
     #    if(abs(delx) > abs(dely)):
     #        if(delx < 0):
